@@ -196,6 +196,6 @@ export const socialLinks = [
     icon: Behance,
     href: "https://www.behance.net/triptiarora",
   },
-  { icon: Instagram, href: "#" },
-  { icon: mail, href: "#" },
+  // { icon: Instagram, href: "#" },
+  { icon: mail, href: "tripti.k.arora@gmail.com" },
 ];

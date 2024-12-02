@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { Briefcase, FileText } from "lucide-react";
 import { socialLinks } from "../data/projects";
+import SocialLinks from "./SocialLinks";
 
 export const EntryPage = () => {
   const navigate = useNavigate();
@@ -19,26 +20,7 @@ export const EntryPage = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
         >
-          {socialLinks.map((link, index) => (
-            <>
-              <motion.a
-                key={index}
-                target="_blank"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                className="text-gray-600 hover:text-purple-600 transition-colors"
-              >
-                <img
-                  className="w-10 h-10 transition-all ease-in-out duration-300"
-                  src={link.icon}
-                  alt="icon"
-                  style={{
-                    transition: "fill 0.3s ease-in-out",
-                  }}
-                />
-              </motion.a>
-            </>
-          ))}
+          <SocialLinks />
         </motion.div>
 
         <motion.h1

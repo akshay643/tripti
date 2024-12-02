@@ -63,27 +63,28 @@ export const ProjectDetails = () => {
             </div>
           </div>
 
-          <div className="prose max-w-none">
+          <div className="prose max-w-none text-center">
             <h2 className="text-2xl font-bold mb-4">{project.title}</h2>
             <p className="text-gray-600 mb-8">{project.description}</p>
 
             <h2 className="text-2xl font-bold mb-4">Key Features</h2>
-            <ul className="list-disc list-inside mb-8">
+            <div className="list-disc flex  justify-center list-inside mb-8">
               {project.features.map((feature, index) => (
-                <li key={index} className="text-gray-500 mb-2">
+                <span key={index} className="text-gray-500 mb-2">
                   {feature}
-                </li>
+                  <span className="px-2">{index !== project.features.length - 1 && " | "}</span>
+                </span>
               ))}
-            </ul>
+            </div>
 
-            <h2 className="text-2xl font-bold mb-4">Project Gallery</h2>
+            {/* <h2 className="text-2xl font-bold mb-4">Project Gallery</h2> */}
             <div className="grid grid-cols-1 gap-4 ">
               {project.gallery.map((image, index) => (
                 // <Zoom key={index}>
                 <img
                   src={image}
                   alt={`${project.title} screenshot ${index + 1}`}
-                  className="rounded-lg shadow-md object-cover w-full h-full"
+                  className="shadow-md object-cover w-full h-full"
                   style={{
                     objectFit: "cover", // Ensures the image covers the entire div
                     display: "block", // Ensures there's no bottom space from inline behavior

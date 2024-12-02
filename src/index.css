@@ -2,12 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  scroll-behavior: smooth;
+@layer base {
+  :root {
+    /* For rgb(255 115 179 / 1) */
+    --color-primary: 255 115 179;
+
+    /* For hsl(333deg 100% 73% / 1) */
+    --color-primary: 333deg 100% 73%;
+
+    /* For rgba(255, 115, 179, 1) */
+    --color-primary: 255, 115, 179;
+  }
 }
 
-body {
-  @apply bg-white text-gray-900;
+html {
+  scroll-behavior: smooth;
 }
 
 /* Custom liquid gradient animation */
@@ -21,4 +30,34 @@ body {
   100% {
     border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
   }
+}
+
+@keyframes liquidExpand {
+  0% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    transform: scale(1);
+    background-color: #a2dff7; /* pastel blue */
+  }
+  50% {
+    border-radius: 50% 50% 50% 50%/50% 50% 50% 50%;
+    transform: scale(1.2); /* Slightly scale up */
+    background-color: #fad0c4; /* pastel pink */
+  }
+  100% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    transform: scale(1);
+    background-color: #a2dff7; /* Back to pastel blue */
+  }
+}
+
+.liquid-animation {
+  animation: liquidFlow 3s ease-in-out infinite;
+}
+
+.liquid-expand {
+  transition: liquidExpand 3s ease-in-out infinite; /* Smooth transition */
+}
+
+.name_title {
+  font-family: "Gloock", serif;
 }

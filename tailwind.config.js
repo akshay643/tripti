@@ -30,8 +30,9 @@ export default {
         pastelLavenderGray: "#C4B4E3", // Added
         pastelIceBlue: "#C0E7F7", // Added
         pastelSalmon: "#FFB8B8", // Added
+        lightText: "#999BA9",
       },
     },
   },
-  plugins: [require("tailwindcss"), require("autoprefixer")],
+  // plugins: [require("tailwindcss"), require("autoprefixer")],
 };

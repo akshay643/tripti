@@ -33,6 +33,4 @@ export default {
         lightText: "#999BA9",
       },
     },
-  },
-  plugins: [require("tailwindcss"), require("autoprefixer")],
-};
+  }};

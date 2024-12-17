@@ -1,7 +1,7 @@
 import Behance from "../images/behance.svg";
 import linkedin from "../images/linkedin.svg";
-import Instagram from "../images/instagram.svg";
 import mail from "../images/mail.svg";
+import { Send, Mail, Phone, MapPin } from "lucide-react";
 
 export const projects = [
   {
@@ -198,4 +198,22 @@ export const socialLinks = [
   },
   // { icon: Instagram, href: "#" },
   { icon: mail, href: "tripti.k.arora@gmail.com" },
+];
+
+export const contactDetails = [
+  {
+    icon: Mail,
+    title: "Email",
+    content: "tripti.k.arora@gmail.com",
+  },
+  // {
+  //   icon: <Phone className="w-6 h-6" />,
+  //   title: "Phone",
+  //   content: "+ (91) 880-0588-042",
+  // },
+  // {
+  //   icon: <MapPin className="w-6 h-6" />,
+  //   title: "Location",
+  //   content: "Gurugram, IN",
+  // },
 ];

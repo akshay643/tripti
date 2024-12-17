@@ -35,13 +35,15 @@ export const About = () => {
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <h2 className="text-4xl font-bold mb-6">About Me</h2>
-            <p className="text-lg text-gray-600 mb-8">
-              With over a decade of experience in UI/UX design, I've had the
-              privilege of working with clients across various industries, from
-              startups to Fortune 500 companies. My passion lies in creating
-              intuitive and beautiful digital experiences that solve real
-              problems.
+            <h2 className="text-4xl  mb-6">About Me</h2>
+            <p className="text-lg text-lightText mb-8">
+              With over a decade of diverse experience in advertising, branding,
+              UI/UX, and crafting seamless digital experiences, I specialize in
+              transforming brands through innovative creative solutions with
+              wireframing, prototyping, and design solutions. I’m passionate
+              about tackling new challenges and crafting designs that seamlessly
+              blend art with human psychology, where form meets function for
+              impactful communication.
             </p>
 
             <div className="grid grid-cols-2 gap-6">
@@ -58,10 +60,10 @@ export const About = () => {
                   transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
                   className="text-center p-4 bg-white rounded-lg shadow-sm"
                 >
-                  <div className="text-2xl font-bold text-purple-600">
+                  <div className="text-2xl font-bold text-pastelGreen">
                     {stat.value}
                   </div>
-                  <div className="text-gray-600">{stat.label}</div>
+                  <div className="text-lightText">{stat.label}</div>
                 </motion.div>
               ))}
             </div>

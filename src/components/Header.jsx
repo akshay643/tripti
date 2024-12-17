@@ -23,16 +23,16 @@ export const Header = () => {
               <Link
                 key={item.name}
                 to={item.href}
-                className={`text-gray-600 hover:text-pastelIndigo transition-colors relative group ${
+                className={`text-gray-600 hover:text-pastelLemon transition-colors relative group ${
                   location.pathname === item.href
-                    ? "text-pastelMint font-medium"
+                    ? "text-pastelLemon font-medium"
                     : ""
                 }`}
               >
                 {item.name}
 
                 {/* Underline effect using the pseudo-element */}
-                <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-pastelIndigo transition-all duration-300 group-hover:w-full group-hover:left-0 group-hover:translate-x-0"></span>
+                <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-pastelLemon transition-all duration-300 group-hover:w-full group-hover:left-0 group-hover:translate-x-0"></span>
               </Link>
             ))}
           </nav>

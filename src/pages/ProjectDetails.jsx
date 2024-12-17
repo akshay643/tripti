@@ -72,7 +72,9 @@ export const ProjectDetails = () => {
               {project.features.map((feature, index) => (
                 <span key={index} className="text-gray-500 mb-2">
                   {feature}
-                  <span className="px-2">{index !== project.features.length - 1 && " | "}</span>
+                  <span className="px-2">
+                    {index !== project.features.length - 1 && " | "}
+                  </span>
                 </span>
               ))}
             </div>
